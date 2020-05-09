@@ -89,18 +89,18 @@ public class MainActivity extends AppCompatActivity {
 
         Cursor cursor=db.query("student",null,null,null,null,null,null);
 
-        ArrayList<com.mao.sqlite.Student>list=new ArrayList<com.mao.sqlite.Student>();
+        ArrayList<com.mao.api_sqlite.Student>list=new ArrayList<com.mao.api_sqlite.Student>();
         while (cursor.moveToNext()){
 
             int id=cursor.getInt(0);
             String name=cursor.getString(1);
             double score=cursor.getDouble(2);
 
-            com.mao.sqlite.Student s=new com.mao.sqlite.Student(id, name, score);
+            com.mao.api_sqlite.Student s=new com.mao.api_sqlite.Student(id, name, score);
             list.add(s);
         }
 
-        for(com.mao.sqlite.Student s:list){
+        for(com.mao.api_sqlite.Student s:list){
 
             System.out.println(s.toString());
         }
