@@ -1,4 +1,4 @@
-package com.mao.sqlite;
+package com.mao.api_sqlite;
 
 public class Student {
 
